@@ -1,109 +1,70 @@
-# ⚡ vite-react-ts-tailwind-starter
+# Getting Started with Create React App
 
-Starter using Vite + React + TypeScript + Tailwind with Firebase.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Motivation
+## Available Scripts
 
-Improve building your faster **prototyping** by using Vite, TypeScript, React, TailwindCSS, Firebase.
+In the project directory, you can run:
 
-This starter uses following libraries:
+### `yarn start`
 
-- Vite
-- React
-  - React Router
-- TypeScript
-- Tailwind CSS
-  - daisyUI
-- Firebase(v9, modular)
-- ESLint
-- Prettier
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Set up
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-```shell
-mv .env.local.example .env.local
-yarn
-yarn dev
-```
+### `yarn test`
 
-### Firebase
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-If you **DO NOT** use Firebase, you should do:
+### `yarn build`
 
-- Delete the Firebase-related code: you check Main.tsx, SignInButton.tsx, SignOutButton.tsx.
-- And then delete `src/lib/firebase.ts`
-- Run `yarn remove firebase`
-- Remove `VITE_FIREBASE_*` env values from `.env.local`
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-If you want to use Firebase, you should do:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- copy Firebase env values from Firebase Console, and paste them to `.env.local`.
-- enable Google Auth in Firebase Console. ref: https://firebase.google.com/docs/auth/web/google-signin#before_you_begin
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Vite
+### `yarn eject`
 
-[Vite](https://github.com/vitejs/vite) is a fast frontend build tool. According to the [README](https://github.com/vitejs/vite/blob/main/README.md), it consists of two major parts:
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-- A dev server that serves your source files over native ES modules, with rich built-in features and astonishingly fast Hot Module Replacement (HMR).
-- A build command that bundles your code with Rollup, pre-configured to output highly optimized static assets for production.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## React
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-[React](https://github.com/facebook/react) is a JavaScript library for building user interfaces.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Due to its awesome renderer system, there are many [React Renderor](https://github.com/chentsulin/awesome-react-renderer). So React can be not used only Web, for example, used by [React Native](https://reactnative.dev/).
+## Learn More
 
-Let's dive into React and Vite can use with React.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## TypeScript
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-[TypeScript](https://github.com/microsoft/TypeScript) is a superset of JavaScript. It is just one of NPM library, but it provides an original compiler.
+### Code Splitting
 
-When you use TypeScript with React, you can write JSX with TypeScript, called TSX. Then you can develop views written by  **Type-Safe** template.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## Tailwind CSS
+### Analyzing the Bundle Size
 
-[Tailwind CSS](https://tailwindcss.com/) is modern utility-first CSS framework. It provides many CSS rules, but these are purged when production builds. So developers do not worry about CSS asset size for performance optimization.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-In VSCode, I recommend to use [intellisense extension](https://tailwindcss.com/docs/intellisense).
+### Making a Progressive Web App
 
-Frequently, React developers are worried about how to write CSS in TSX(JSX) template. You must choose from CSS Modules, [styled-components](https://styled-components.com/), [linaria](https://github.com/callstack/linaria), and so on.
-Additionally, CSS architecture is difficult about scoping, e.g. BEM, FLOCSS.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-When you decide to use Tailwind, you only write utility-first CSS classes, you don't have to worry about them!
+### Advanced Configuration
 
-### daisyUI
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-[daisyUI](https://daisyui.com/) is Tailwind CSS Components library.
+### Deployment
 
-It prepares components CSS classes such as 'btn'. If you provide 'btn' class to `<button>` element, then there should be placed completely designed button.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-If you don't want to use it, just remove the package and remove config in `tailwind.config.js`.
+### `yarn build` fails to minify
 
-## Firebase
-
-[Firebase](https://firebase.google.com/) is a PaaS that makes us create hi-quality apps so easy and so fast.
-
-This library is not suitable for everyone, but I think it is one of the best libraries for prototyping. Therefore, I have added it to this repository.
-
-The Firebase js SDK has become very useful in version 9, with [optimizations that greatly reduce bundle size](https://firebase.google.com/docs/web/modular-upgrade).
-
-### How to Use
-
-Please look at [firebase.ts](https://github.com/TeXmeijin/vite-react-ts-tailwind-starter/blob/main/src/lib/firebase.ts).
-
-There you will find a set of utility functions to manipulate Firebase for the environment in which the Emulator is used.
-
-## Formatter and Linter
-
-Already set up [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/). You can customize the rules.
-
-NOTICE: The template does not use [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) and [prettier-eslint](https://github.com/prettier/prettier-eslint). So I recommend that running commands individually. e.g. `prettier && eslint`.
-
-Please read: https://prettier.io/docs/en/integrating-with-linters.html.
-
-# ToDo
-
-- [x] install and set up [TailwindCSS/JIT](https://github.com/tailwindlabs/tailwindcss-jit) see this [PR](https://github.com/TeXmeijin/vite-react-ts-tailwind-starter/pull/1)
-
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
